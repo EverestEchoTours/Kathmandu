@@ -50,10 +50,13 @@
     nav {
       margin-top: 0.5rem;
       animation: fadeInUp 1.5s ease;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
     nav a {
       color: white;
-      margin: 0 1rem;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
@@ -69,13 +72,15 @@
     .hero {
       background: url('bg.jpg') center/cover no-repeat;
       width: 100%;
-      height: 80vh;
+      min-height: 60vh;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       text-align: center;
+      padding: 2rem;
+      box-sizing: border-box;
       border-top: 8px solid #ffd700;
       border-bottom: 8px solid #ffd700;
       animation: zoomIn 2s ease-in-out;
@@ -85,16 +90,22 @@
       to { transform: scale(1); opacity: 1; }
     }
     .hero h2 {
-      font-size: 3rem;
+      font-size: 2rem;
       margin: 0;
       animation: fadeIn 3s ease-in-out;
+    }
+    @media (min-width: 600px) {
+      .hero h2 {
+        font-size: 3rem;
+      }
     }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
     .section {
-      padding: 3rem 2rem;
+      padding: 2rem 1rem;
+      width: 100%;
       max-width: 800px;
       animation: fadeInUp 1.5s ease forwards;
     }
@@ -103,31 +114,45 @@
       to { transform: translateY(0); opacity: 1; }
     }
     .section h3 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #a50026;
       margin-bottom: 1rem;
-      border-left: none;
-      padding-left: 0;
       animation: pulse 3s infinite;
+    }
+    @media (min-width: 600px) {
+      .section h3 {
+        font-size: 2rem;
+      }
     }
     .section p {
       line-height: 1.6;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #444;
       animation: fadeIn 2s ease-in-out;
     }
+    @media (min-width: 600px) {
+      .section p {
+        font-size: 1.1rem;
+      }
+    }
     .icons {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       margin-top: 1.5rem;
       animation: fadeInUp 2s ease;
     }
     .icons i {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #a50026;
       animation: bounce 2s infinite;
       transition: transform 0.3s ease, color 0.3s ease;
+    }
+    @media (min-width: 600px) {
+      .icons i {
+        font-size: 2rem;
+      }
     }
     .icons i:hover {
       transform: scale(1.3);
